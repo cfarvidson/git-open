@@ -21,8 +21,18 @@ git-open
 Installation
 ------------
 
-TODO
+### Using pip
 
+    pip install git+https://github.com/cfp2000/git-open.git#egg=git-open
+
+### Using pipsi (recommended)
+
+[pipsi](https://github.com/mitsuhiko/pipsi) is a great tool to install python tools globally.
+
+> pipsi makes installing python packages with global entry points painless. 
+> These are Python packages that expose an entry point through the command line such as Pygments.
+
+    pipsi install git+https://github.com/cfp2000/git-open.git#egg=git-open
 
 Credits
 -------
