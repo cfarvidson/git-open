@@ -1,6 +1,8 @@
 git-open
 ========
 
+[![Build Status](https://travis-ci.org/cfp2000/git-open.svg?branch=master)](https://travis-ci.org/cfp2000/git-open)
+
 Open a git repo in the browser from the terminal.
 
 Features
