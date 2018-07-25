@@ -3,8 +3,11 @@ Changelog
 
 **unreleased**
 
+v0.0.2
+-----
+- Update the install description
+
 v0.0.1
 -----
-
 * Implemented tox testing
 * Created
