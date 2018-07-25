@@ -1,0 +1,13 @@
+[run]
+branch = True
+source =
+    git_open
+
+[paths]
+source =
+   src/git_open
+   .tox/*/lib/python*/site-packages/git_open
+   .tox/pypy/site-packages/git_open
+
+[report]
+show_missing = True
