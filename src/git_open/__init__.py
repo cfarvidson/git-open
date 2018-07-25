@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-__version__ = "0.0.1-dev"
+__version__ = "0.0.1"
 
 __title__ = "git_open"
 __author__ = """Carl-Fredrik Pettersson"""
