@@ -3,6 +3,10 @@ Changelog
 
 **unreleased**
 
+v0.0.3
+-----
+- Updated ci pipeline 
+
 v0.0.2
 -----
 - Update the install description
