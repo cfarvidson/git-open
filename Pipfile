@@ -20,6 +20,8 @@ bumpversion = "*"
 check-manifest = "*"
 pytest-watch = "*"
 setuptools = ">=38.6.0"
+twine = "*"
+keyring = "*"
 
 [requires]
 python_version = "3.6"
