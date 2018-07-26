@@ -3,6 +3,7 @@ git-open
 
 [![CI Status](https://travis-ci.org/cfp2000/git-open.svg?branch=master)](https://travis-ci.org/cfp2000/git-open)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
+[![codecov](https://codecov.io/gh/cfp2000/git-open/branch/master/graph/badge.svg)](https://codecov.io/gh/cfp2000/git-open)
 
 Open a git repo in the browser from the terminal.
 
