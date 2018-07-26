@@ -2,6 +2,8 @@ Changelog
 =========
 
 **unreleased**
+- Add the package to pypi
+- Update the install readme
 
 v0.0.3
 -----

@@ -28,7 +28,7 @@ Installation
 
 ### Using pip
 
-    pip install git+https://github.com/cfp2000/git-open.git#egg=git-open
+    pip install git-open
 
 ### Using pipsi (recommended)
 
@@ -37,7 +37,7 @@ Installation
 > pipsi makes installing python packages with global entry points painless. 
 > These are Python packages that expose an entry point through the command line such as Pygments.
 
-    pipsi install git+https://github.com/cfp2000/git-open.git#egg=git-open
+    pipsi install git-open
 
 Credits
 -------
