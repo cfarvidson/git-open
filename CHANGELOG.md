@@ -2,6 +2,9 @@ Changelog
 =========
 
 **unreleased**
+
+v1.0.0
+-----
 - Add the package to pypi
 - Update the install readme
 
