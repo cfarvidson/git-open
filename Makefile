@@ -91,3 +91,16 @@ install: clean ## install the package to the active Python's site-packages
 .PHONY: build-shiv
 build-shiv: dist
 	shiv -e git_open.cli.main -o dist/git-open dist/*.tar.gz
+
+.PHONY: upload-test
+upload-test:
+	twine upload --repository testpypi dist/*
+
+.PHONY: upload-prod
+upload-prod:
+	twine upload --repository pypi dist/*
+
+.PHONY: sign
+sign:
+	echo "signing with $(SIGN_EMAIL)"
+	gpg --detach-sign -u $(SIGN_EMAIL) -a dist/*
