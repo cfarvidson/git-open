@@ -10,6 +10,7 @@ include tox.ini
 include .editorconfig
 include .bumpversion.cfg
 include .coveragerc
+include requirements.txt
 
 recursive-include tests *
 recursive-include .github *
