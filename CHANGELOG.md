@@ -3,6 +3,10 @@ Changelog
 
 **unreleased**
 
+v1.0.2
+-----
+- Fix the manifest.in
+
 v1.0.1
 -----
 - Add a vulnerabilities checking to the CI pipeline (snyk.io)
