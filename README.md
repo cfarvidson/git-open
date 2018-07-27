@@ -5,6 +5,7 @@ git-open
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 [![codecov](https://codecov.io/gh/cfp2000/git-open/branch/master/graph/badge.svg)](https://codecov.io/gh/cfp2000/git-open)
 [![Maintainability](https://api.codeclimate.com/v1/badges/09be50f0293cfed0e89a/maintainability)](https://codeclimate.com/github/cfp2000/git-open/maintainability)
+[![Known Vulnerabilities](https://snyk.io/test/github/cfp2000/git-open/badge.svg?targetFile=requirements.txt)](https://snyk.io/test/github/cfp2000/git-open?targetFile=requirements.txt)
 
 Open a git repo in the browser from the terminal.
 
