@@ -104,3 +104,8 @@ upload-prod:
 sign:
 	echo "signing with $(SIGN_EMAIL)"
 	gpg --detach-sign -u $(SIGN_EMAIL) -a dist/*
+
+.PHONY: freeze
+freeze:
+	pipenv lock
+	pipenv lock -r > requirements.txt

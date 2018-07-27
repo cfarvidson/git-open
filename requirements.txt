@@ -1,0 +1,4 @@
+-i https://pypi.org/simple
+click==6.7
+sh==1.12.14
+six==1.11.0
