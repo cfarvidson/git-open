@@ -3,6 +3,10 @@ Changelog
 
 **unreleased**
 
+v1.0.1
+-----
+- Add a vulnerabilities checking to the CI pipeline (snyk.io)
+
 v1.0.0
 -----
 - Add the package to pypi
