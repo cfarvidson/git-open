@@ -3,6 +3,10 @@ Changelog
 
 **unreleased**
 
+v1.0.3
+-----
+- Fix the build
+
 v1.0.2
 -----
 - Fix the manifest.in
