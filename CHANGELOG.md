@@ -2,6 +2,7 @@ Changelog
 =========
 
 **unreleased**
+- Add a download badge from http://pepy.tech/project/git-open to the readme
 
 v1.0.3
 -----

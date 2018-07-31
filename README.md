@@ -6,6 +6,7 @@ git-open
 [![codecov](https://codecov.io/gh/cfp2000/git-open/branch/master/graph/badge.svg)](https://codecov.io/gh/cfp2000/git-open)
 [![Maintainability](https://api.codeclimate.com/v1/badges/09be50f0293cfed0e89a/maintainability)](https://codeclimate.com/github/cfp2000/git-open/maintainability)
 [![Known Vulnerabilities](https://snyk.io/test/github/cfp2000/git-open/badge.svg?targetFile=requirements.txt)](https://snyk.io/test/github/cfp2000/git-open?targetFile=requirements.txt)
+[![Downloads](http://pepy.tech/badge/git-open)](http://pepy.tech/project/git-open)
 
 Open a git repo in the browser from the terminal.
 
