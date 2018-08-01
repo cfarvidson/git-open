@@ -23,6 +23,8 @@ endef
 export PRINT_HELP_PYSCRIPT
 BROWSER := python -c "$$BROWSER_PYSCRIPT"
 
+export PYTHONPATH := $(PYTHONPATH):$(PWD)/src
+
 help:
 	@python -c "$$PRINT_HELP_PYSCRIPT" < $(MAKEFILE_LIST)
 
@@ -105,7 +107,14 @@ sign:
 	echo "signing with $(SIGN_EMAIL)"
 	gpg --detach-sign -u $(SIGN_EMAIL) -a dist/*
 
-.PHONY: freeze
-freeze:
-	pipenv lock
+.PHONY: lock
+lock:
+	pipenv lock --clear
+
+.PHONY: create-requirements-txt
+create-requirements-txt:
 	pipenv lock -r > requirements.txt
+
+.PHONY: freeze
+freeze: lock create-requirements-txt
+
