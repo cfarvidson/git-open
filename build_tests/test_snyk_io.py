@@ -26,6 +26,20 @@ def get_sha1(filename):
     return sha1.hexdigest()
 
 
+def pypi_mirror_always_trailing_slash(filename):
+
+    with open(filename, mode="r") as file:
+        data = file.readlines()
+
+    trailing_slash = data[0].endswith("/\n")
+
+    if not trailing_slash:
+        print("Adding the trailing slash to the first line of the %s" % filename)
+        data[0] = data[0].replace("\n", "/\n")
+        with open(filename, "w") as file:
+            file.writelines(data)
+
+
 def test_snyk_io__prerequisites():
     """Verify that the Pipfile.lock matches the requirements.txt.
 
@@ -34,5 +48,6 @@ def test_snyk_io__prerequisites():
     filename = "requirements.txt"
     sha_before = get_sha1(filename)
     sh.make("create-requirements-txt")
+    pypi_mirror_always_trailing_slash(filename)
     sha_after = get_sha1(filename)
     assert sha_before == sha_after
