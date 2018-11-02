@@ -2,6 +2,9 @@ Changelog
 =========
 
 **unreleased**
+
+v1.0.5
+-----
 - Deploy to pypi from travis
 
 v1.0.4
