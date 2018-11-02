@@ -6,8 +6,9 @@ Changelog
 v1.0.4
 -----
 - Add a download badge from http://pepy.tech/project/git-open to the readme
-- Add a test that will ensure that the dependencies will be checked by snyk.io 
-  when versions are bumped by dependabot 
+- Add a test that will ensure that the dependencies will be checked by snyk.io
+  when versions are bumped by dependabot
+- Fixes an [issue](https://github.com/cfp2000/git-open/issues/23) with opening public repositories
 
 v1.0.3
 -----
