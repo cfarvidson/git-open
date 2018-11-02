@@ -72,6 +72,10 @@ def test_get_origin_line(test_input, expected):
             "origin	git@bitbucket.org:some-namespace/some-repo.git (fetch)",
             "git@bitbucket.org:some-namespace/some-repo",
         ),
+        (
+            "origin	https://github.com/qmk/qmk_firmware (fetch)",
+            "https://github.com/qmk/qmk_firmware",
+        ),
     ],
 )
 def test_filter_origin_line(test_input, expected):

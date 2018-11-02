@@ -41,6 +41,7 @@ class GitOpen(object):
         """
         origin_line = re.sub("^origin", "", origin_line)
         origin_line = re.sub("\.git.*$", "", origin_line)
+        origin_line = re.sub("\(.*\)", "", origin_line)
         origin_line = origin_line.strip(string.whitespace)
         return origin_line
 
