@@ -1,65 +1,27 @@
-dist: trusty
-group: travis_latest
-sudo: false
-cache:
-  directories:
-    - $HOME/.cache/pip
-
 language: python
-
-
-matrix:
-  fast_finish: true
-
-  include:
-    - python: "2.7"
-      env: TOXENV=py27
-    - python: "3.4"
-      env: TOXENV=py34
-    - python: "3.5"
-      env: TOXENV=py35
-    - python: "3.6"
-      env: TOXENV=py36
-    - python: "pypy"
-      env: TOXENV=pypy
-    - python: "pypy3"
-      env: TOXENV=pypy3
-    - python: "3.7"
-      env: TOXENV=py37
-      dist: xenial
-      sudo: true
-
-    # Prevent breakage by a new releases
-    - python: "3.6-dev"
-      env: TOXENV=py36
-    - python: "3.7-dev"
-      env: TOXENV=py37
-
-    # Meta
-    - python: "3.6"
-      env: TOXENV=lint
-    - python: "3.6"
-      env: TOXENV=manifest
-    - python: "3.6"
-      env: TOXENV=snyk
-
-  allow_failures:
-    - python: "3.6-dev"
-    - python: "3.7-dev"
-
-
+python:
+  - 3.6
+  - 3.5
+  - 3.4
+  - 2.7
 install:
-  - pip install tox
-
+  - pip install tox-travis
 script:
   - tox
-
 before_install:
   - pip install codecov
-
 after_success:
   - tox -e coverage-report
   - codecov
-
 notifications:
   email: false
+deploy:
+  provider: pypi
+  distributions: sdist bdist_wheel
+  user: cfp2000
+  password:
+    secure: EUV7/fARxxL+JVJ7GjW1u0P7xUnsiQtY5mLDmnGU1vUFJmhT0OBOwibfcnUk0Sn2fbMpqjW/gQDo37RMPqGNwPjUGqGAuNVrxRRM9hAwxE2a4yeu+uWQjawEzbU1gggT7VA2BrXdmp2aterdygw/x7xJnpukM83ptoAhYYtHxpby6T3wGNpGh+SslN+PA1QEm8xx+NquIMD+F11FdPhrduylxKbUNPsbor2ajsbr+pMJfWITcAyiHqFaqZRrtNVlCTbc36YKpvi477jztYdjbYMlXPXIyr4IxOmjfum3BAbGlJQw0TJBGgHxu/pQs/k1qyAUtsapDGbPKveK7ZVY+PFjD034nwvz+N7L6Omuvfn41grkQ1v6Vt8QDNDRAlD52kveXL3R2qqMJhSSGVOQ54zGsEohl2euqS8DxMV3ZS7VEeScc/zFLssN741Rrfx/KjlARfkAmsG8joHlYXEBVZIEljV3AYLx3Zul5h8RDMhjV5V9Ek5X+8En8uZGPidwWHMYru1k7FpXb6mSgvqQso5K5ouhnrsZuDR4vKdYCBf4RXaq9uIOEpliGVq0dEipUFK6oqpEWasUdZgmSgAFNQ1oQHtsv5m8C3VD2J0Pe4c44Z9b5ywe/RJbfMQ0/B2nSY3A5qLr2OPFcVgDAKJPyQ+KYs7jd18P9t8e+wN5+3Y=
+  on:
+    tags: true
+    repo: cfp2000/git-open
+    python: 3.6
