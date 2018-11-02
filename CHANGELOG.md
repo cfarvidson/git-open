@@ -2,6 +2,9 @@ Changelog
 =========
 
 **unreleased**
+
+v1.0.4
+-----
 - Add a download badge from http://pepy.tech/project/git-open to the readme
 - Add a test that will ensure that the dependencies will be checked by snyk.io 
   when versions are bumped by dependabot 
