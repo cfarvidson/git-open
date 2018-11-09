@@ -266,11 +266,11 @@
         },
         "keyring": {
             "hashes": [
-                "sha256:a86499736e2e6555618606c2fbc98147e803fa276f990ddba7011eb29a01b5ad",
-                "sha256:b1ee90571b4fa1db66e99b7e8ccb0fec5e9669a63d80c41ed152dcd05f599178"
+                "sha256:2a5cf5e596cbf8b66b98b8df2c214adfe21e6e18baa82006b2c482bd0c4be94c",
+                "sha256:95e4f1d0342d0bf5d137d1d2352d59f7abbebb1507bec1ac26831c411ac23150"
             ],
             "index": "pypi",
-            "version": "==16.0.1"
+            "version": "==16.0.2"
         },
         "mccabe": {
             "hashes": [
@@ -389,10 +389,10 @@
         },
         "requests": {
             "hashes": [
-                "sha256:99dcfdaaeb17caf6e526f32b6a7b780461512ab3f1d992187801694cba42770c",
-                "sha256:a84b8c9ab6239b578f22d1c21d51b696dcfe004032bb80ea832398d6909d7279"
+                "sha256:65b3a120e4329e33c9889db89c80976c5272f56ea92d3e74da8a463992e3ff54",
+                "sha256:ea881206e59f41dbd0bd445437d792e43906703fff75ca8ff43ccdb11f33f263"
             ],
-            "version": "==2.20.0"
+            "version": "==2.20.1"
         },
         "requests-toolbelt": {
             "hashes": [
