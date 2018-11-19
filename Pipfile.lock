@@ -264,11 +264,11 @@
         },
         "keyring": {
             "hashes": [
-                "sha256:2a5cf5e596cbf8b66b98b8df2c214adfe21e6e18baa82006b2c482bd0c4be94c",
-                "sha256:95e4f1d0342d0bf5d137d1d2352d59f7abbebb1507bec1ac26831c411ac23150"
+                "sha256:e605f00553c083eaaa8620b29edeea40323c5c5117b64267654f529951e3245c",
+                "sha256:e9d58fcb4e559f13ae7d10df301cef45ef2786ef8162a648373f8566b1761eb0"
             ],
             "index": "pypi",
-            "version": "==16.0.2"
+            "version": "==16.1.0"
         },
         "mccabe": {
             "hashes": [
