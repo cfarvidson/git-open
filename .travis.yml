@@ -47,15 +47,11 @@ matrix:
   allow_failures:
     - python: "3.6-dev"
     - python: "3.7-dev"
+    - env: TOXENV=coverage-report
 
 install: pip install tox
 script:
   - tox
-before_install:
-  - pip install codecov
-after_success:
-  - tox -e coverage-report
-  - codecov
 notifications:
   email: false
 deploy:
