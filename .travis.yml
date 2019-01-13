@@ -35,6 +35,14 @@ matrix:
       env: TOXENV=dev-dependencies
       dist: xenial
       sudo: true
+    - python: "3.7"
+      env: TOXENV=snyk
+      dist: xenial
+      sudo: true
+    - python: "3.7"
+      env: TOXENV=coverage-report
+      dist: xenial
+      sudo: true
 
   allow_failures:
     - python: "3.6-dev"
