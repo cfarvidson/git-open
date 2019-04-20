@@ -47,7 +47,6 @@ matrix:
   allow_failures:
     - python: "3.6-dev"
     - python: "3.7-dev"
-    - env: TOXENV=coverage-report
 
 install: pip install tox
 script:
