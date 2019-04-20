@@ -2,6 +2,7 @@ Changelog
 =========
 
 **unreleased**
+- Updated dependencies
 
 v1.0.5
 -----
