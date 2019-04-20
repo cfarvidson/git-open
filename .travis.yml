@@ -34,10 +34,6 @@ matrix:
       env: TOXENV=snyk
       dist: xenial
       sudo: true
-    - python: "3.7"
-      env: TOXENV=coverage-report
-      dist: xenial
-      sudo: true
   allow_failures:
     - python: 3.6-dev
     - python: 3.7-dev
@@ -59,6 +55,3 @@ deploy:
     repo: cfp2000/git-open
     python: 3.7
     condition: "$TOXENV = dev-dependencies"
-env:
-  matrix:
-    secure: JUxBnBTSfdSnsvqVj30lrFM68idu27AfvFAzS3FUfyU/3hKNe+sWRN9JKQiUT8Kuck6cdZgazKVxH+6Ya7kNcYHynDSAdOLQS85eXWEDOy4d7Ju8Go46m0+smwU6mIPqu7zYHa/HFcQTi6ykIxmkQbV7sosI7wcN8Osd/awzpCZEUAA9R8JglG3l4R2OIiG2ynUOA5KfAd/xGrA6sUnrUg3ztFDSV6xTU8HdDTWnNYNkphmw9RVuAvkl7m8hPSRbHM95nQ7aUaCJJPMVCZ9E7qvohtO7NNoL5u0UNyitX85/SJV/FdHiPW7nxgkJg9rm1sRccUE8n5egTCm2M3BKXl668YdcqhFbrXn1bh9Ik0nm80TL7fsGBvb5Zq+7VxnJRWjQToIAB/RBhIRnfcISi8h9Wx+WTqstu2nuQb99ehm9W8JqzJNLJtNnhtOt87r1dA7CosmG1U4qXud4Wffqr8ccyR06XGIq8G3EkfZbiOanTQysqqFi4x2B4SdqBFpXfBc1sYyJ+f7+2X49f9utV37psEePdUdE8yIcOqlq+XDU4baG5jA25TrGC3fGdhSlcHxyCOzOmYdklNi/tdEDuf+DJG6U9rzRMgq6gc/e42fXdZtzr6+YDYSYH63P4dM7sAAr1mXhhB2JyFU9J0jfrUNPbrrgrfUVdlZWL6UJwH4=
