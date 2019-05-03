@@ -14,3 +14,13 @@ def test_open(mock_open_browser):
     assert mock_open_browser.called
     mock_open_browser.assert_called_with("https://github.com/cfp2000/git-open")
     assert "Opening https://github.com/cfp2000/git-open" in result.output
+
+
+@patch("webbrowser.open")
+def test_open_ci(mock_open_browser):
+    runner = CliRunner()
+    result = runner.invoke(cli.main, ["ci"])
+    assert result.exit_code == 0
+    assert mock_open_browser.called
+    mock_open_browser.assert_called_with("https://travis-ci.com/cfp2000/git-open")
+    assert "Opening https://travis-ci.com/cfp2000/git-open" in result.output
