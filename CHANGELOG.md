@@ -3,6 +3,8 @@ Changelog
 
 **unreleased**
 
+v1.0.7
+-----
 - Updated dependencies
 - Moves to the new repository
 
