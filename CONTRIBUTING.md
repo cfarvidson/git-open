@@ -11,7 +11,7 @@ Types of Contributions
 
 ### Report Bugs
 
-Report bugs at [https://github.com/cfp2000/git-open/issues].
+Report bugs at [https://github.com/cfarvidson/git-open/issues].
 
 If you are reporting a bug, please include:
 
@@ -22,12 +22,12 @@ If you are reporting a bug, please include:
 ### Fix Bugs
 
 
-Look through the https://github.com/cfp2000/git-open/issues for bugs. Anything tagged with "bug"
+Look through the https://github.com/cfarvidson/git-open/issues for bugs. Anything tagged with "bug"
 and "help wanted" is open to whoever wants to implement it.
 
 ### Implement Features
 
-Look through the https://github.com/cfp2000/git-open/issues for features. Anything tagged with "enhancement"
+Look through the https://github.com/cfarvidson/git-open/issues for features. Anything tagged with "enhancement"
 and "help wanted" is open to whoever wants to implement it.
 
 ### Write Documentation
@@ -40,7 +40,7 @@ articles, and such.
 ### Submit Feedback
 
 
-The best way to send feedback is to file an issue at [https://github.com/cfp2000/git-open/issues].
+The best way to send feedback is to file an issue at [https://github.com/cfarvidson/git-open/issues].
 
 If you are proposing a feature:
 
@@ -54,7 +54,7 @@ Get Started!
 
 Ready to contribute? Here's how to set up `git_open` for local development.
 
-1. Fork the `git_open` repo on [https://github.com/cfp2000/git-open].
+1. Fork the `git_open` repo on [https://github.com/cfarvidson/git-open].
 2. Clone your fork locally::
 
     $ git clone git@github.com:your_name_here/git_open.git
