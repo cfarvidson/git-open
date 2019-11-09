@@ -3,11 +3,14 @@ Changelog
 
 **unreleased**
 
+v1.0.8
+-----
+- Updated dependencies
+
 v1.0.7
 -----
 - Updated dependencies
 - Moves to the new repository
-
 
 v1.0.6
 -----
