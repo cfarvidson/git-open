@@ -16,7 +16,6 @@ recursive-include tests *
 recursive-include .github *
 recursive-exclude * __pycache__
 recursive-exclude * *.py[co]
-recursive-include build_tests *.py
 
 recursive-include src *
 
