@@ -5,6 +5,7 @@ Changelog
 - Upgraded dependencies
 - Updated readme to recommend the use of pipx over pipsi
 - Adds a "git open commit" sub-command
+- Adds a "git open branch" sub-command
 
 v1.0.8
 -----
