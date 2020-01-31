@@ -111,3 +111,9 @@ sign:
 lock:
 	pip-compile --output-file requirements.txt requirements/base.in
 	pip-compile --output-file dev.txt requirements/dev.in
+
+.PHONY: uninstall
+uninstall:
+	python setup.py install --record files.txt
+	xargs rm -rf < files.txt
+	rm files.txt
