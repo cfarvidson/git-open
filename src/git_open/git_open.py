@@ -66,6 +66,14 @@ class GitOpen(object):
                 filtered_origin_string,
             )
 
+    def add_commit_to_url(self):
+        commit_hash = GitOpen.get_current_commit_hash()
+        self.url += "/commit/%s" % commit_hash
+
+    def add_branch_to_url(self):
+        branch = GitOpen.get_current_branch()
+        self.url += "/tree/%s" % branch
+
     @staticmethod
     def get_remotes():
         try:
@@ -85,3 +93,11 @@ class GitOpen(object):
             webbrowser.open(self.url)
         else:
             print("Cannot open URL")
+
+    @staticmethod
+    def get_current_commit_hash():
+        return sh.git("rev-parse", "HEAD").strip()
+
+    @staticmethod
+    def get_current_branch():
+        return sh.git("rev-parse", "--abbrev-ref", "HEAD").strip()

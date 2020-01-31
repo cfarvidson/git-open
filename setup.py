@@ -41,7 +41,7 @@ EXTRAS_REQUIRE = {
 EXTRAS_REQUIRE["dev"] = (
     EXTRAS_REQUIRE["tests"] + EXTRAS_REQUIRE["docs"] + ["pre-commit"]
 )
-ENTRY_POINTS = {"console_scripts": ["git-open=git_open.cli:main"]}
+ENTRY_POINTS = {"console_scripts": ["git-open=git_open.cli:cli"]}
 ###############################################################################
 HERE = os.path.abspath(os.path.dirname(__file__))
 
