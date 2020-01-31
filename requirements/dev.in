@@ -1,0 +1,13 @@
+-r ../requirements.txt  # production
+flake8
+tox
+coverage
+pytest
+pytest-runner
+wheel
+bumpversion
+check-manifest
+pytest-watch
+setuptools>=38.6.0
+twine
+keyring

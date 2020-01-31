@@ -109,12 +109,5 @@ sign:
 
 .PHONY: lock
 lock:
-	pipenv lock --clear
-
-.PHONY: create-requirements-txt
-create-requirements-txt:
-	pipenv lock -r > requirements.txt
-
-.PHONY: freeze
-freeze: lock create-requirements-txt
-
+	pip-compile --output-file requirements.txt requirements/base.in
+	pip-compile --output-file dev.txt requirements/dev.in
