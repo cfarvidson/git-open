@@ -4,6 +4,7 @@ Changelog
 **unreleased**
 - Upgraded dependencies
 - Updated readme to recommend the use of pipx over pipsi
+- Adds a "git open commit" sub-command
 
 v1.0.8
 -----

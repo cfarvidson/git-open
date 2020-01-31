@@ -11,14 +11,24 @@ Open a git repo in the browser from the terminal.
 
 From the terminal type the following command to open the current repository in your browser.
 
-```
-git open
-```
-
-or
+### Usage
 
 ```
-git-open
+$ git-open --help
+Usage: git-open [OPTIONS] COMMAND [ARGS]...
+
+  Open a git repo in the browser from the terminal.
+
+  Running the command without any sub-command will open the main page of the
+  repository.
+
+Options:
+  --help  Show this message and exit.
+
+Commands:
+  branch   Open the current branch
+  commit   Open the current commit
+  version  Show the current git-open version
 ```
 
 ## Installation
@@ -31,7 +41,6 @@ git-open
 
 [pipx](https://github.com/pipxproject/pipx) is a great tool to install python tools globally.
 
-
 Installing pipx on macOS:
 
     brew install pipx
@@ -40,7 +49,6 @@ Installing pipx on macOS:
 Installing git-open using pipx:
 
     pipx install git-open
-    
 
 ## Credits
 

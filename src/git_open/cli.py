@@ -6,23 +6,42 @@ from .git_open import GitOpen
 from . import __version__
 
 
-@click.command()
-@click.option("--version", is_flag=True, help="Show the current git-open version")
-def main(version):
-    """Console script for git_open.
+@click.group(invoke_without_command=True)
+@click.pass_context
+def cli(ctx):
+    """Open a git repo in the browser from the terminal.
 
-    This script will open a remote repo from the terminal.
+    Running the command without any sub-command will open the main page of the repository.
     """
-    if version:
-        print_version()
+    if ctx.invoked_subcommand is None:
+        git_repo = GitOpen()
+        git_repo.open_from_terminal()
+
+
+@cli.command()
+def commit():
+    """Open the current commit"""
     git_repo = GitOpen()
+    click.echo("Opening commit...")
+    git_repo.add_commit_to_url()
     git_repo.open_from_terminal()
 
 
-def print_version():
+@cli.command()
+def branch():
+    """Open the current branch"""
+    git_repo = GitOpen()
+    click.echo("Opening branch...")
+    git_repo.add_branch_to_url()
+    git_repo.open_from_terminal()
+
+
+@cli.command()
+def version():
+    """Show the current git-open version"""
     click.echo("version: {}".format(__version__))
     sys.exit()
 
 
 if __name__ == "__main__":
-    main()
+    cli(obj={})

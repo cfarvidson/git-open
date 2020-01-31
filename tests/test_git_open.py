@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import, division, print_function
 import pytest
+import webbrowser
 
 from click.testing import CliRunner
 
@@ -12,10 +13,7 @@ from git_open.git_open import GitOpen
 def test_command_line_interface():
     """Test the CLI."""
     runner = CliRunner()
-    # result = runner.invoke(cli.main)
-    # assert result.exit_code == 0
-    # assert 'git_open.cli.main' in result.output
-    help_result = runner.invoke(cli.main, ["--help"])
+    help_result = runner.invoke(cli.cli, ["--help"])
     assert help_result.exit_code == 0
     assert "Show this message and exit." in help_result.output
 
