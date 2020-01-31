@@ -2,6 +2,9 @@ Changelog
 =========
 
 **unreleased**
+
+v1.1.0
+-----
 - Upgraded dependencies
 - Updated readme to recommend the use of pipx over pipsi
 - Adds a "git open commit" sub-command
