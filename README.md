@@ -28,14 +28,22 @@ git-open
 
     pip install git-open
 
-### Using pipsi (recommended)
+### Using pipx (recommended)
 
-[pipsi](https://github.com/mitsuhiko/pipsi) is a great tool to install python tools globally.
+[pipx](https://github.com/pipxproject/pipx) is a great tool to install python tools globally.
 
-> pipsi makes installing python packages with global entry points painless.
-> These are Python packages that expose an entry point through the command line such as Pygments.
 
-    pipsi install git-open
+On macOS:
+
+    brew install pipx
+    pipx ensurepath
+
+Upgrade pipx with `brew update && brew upgrade pipx`.
+    
+Otherwise, install via pip:
+    
+    python3 -m pip install --user pipx
+    python3 -m pipx ensurepath
 
 ## Credits
 

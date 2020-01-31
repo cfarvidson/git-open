@@ -2,8 +2,8 @@ Changelog
 =========
 
 **unreleased**
-v1.0.8
------
+- Upgraded dependencies
+- Updated readme to recommend the use of pipx over pipsi
 
 v1.0.8
 -----
