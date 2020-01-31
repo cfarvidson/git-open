@@ -33,17 +33,15 @@ git-open
 [pipx](https://github.com/pipxproject/pipx) is a great tool to install python tools globally.
 
 
-On macOS:
+Installing pipx on macOS:
 
     brew install pipx
     pipx ensurepath
 
-Upgrade pipx with `brew update && brew upgrade pipx`.
+Installing git-open using pipx:
+
+    pipx install git-open
     
-Otherwise, install via pip:
-    
-    python3 -m pip install --user pipx
-    python3 -m pipx ensurepath
 
 ## Credits
 
