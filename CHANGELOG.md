@@ -2,6 +2,7 @@ Changelog
 =========
 
 **unreleased**
+- Fixes a bug when custom ports are used in the remote
 
 v1.1.0
 -----
