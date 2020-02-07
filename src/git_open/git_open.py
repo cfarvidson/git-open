@@ -40,10 +40,31 @@ class GitOpen(object):
         github.com:username/git_open.git
         """
         origin_line = re.sub("^origin", "", origin_line)
+
+        # Remove protocols
+        origin_line = re.sub("http://", "", origin_line)
+        origin_line = re.sub("ssh://", "", origin_line)
+
         origin_line = re.sub("\.git.*$", "", origin_line)
         origin_line = re.sub("\(.*\)", "", origin_line)
         origin_line = origin_line.strip(string.whitespace)
         return origin_line
+
+    @staticmethod
+    def _handle_ports_in_url(origin_string):
+        """Converts : to / if the : is followed by a character
+        
+        git@gitlab.some-domain.com:2222/user/some-repo => Does nothing 
+        git@gitlab.some-domain.com:user/some-repo => git@gitlab.some-domain.com/user/some-repo
+        """
+        if ":" in origin_string:
+            first_char = origin_string.split(":")[1][0]
+            try:
+                int(first_char)
+            except ValueError:
+                return origin_string.replace(":", "/")
+
+        return origin_string
 
     @staticmethod
     def make_url(filtered_origin_string):
@@ -56,7 +77,9 @@ class GitOpen(object):
             return filtered_origin_string
 
         elif filtered_origin_string.startswith("git@"):
-            filtered_origin_string = filtered_origin_string.replace(":", "/")
+            filtered_origin_string = GitOpen._handle_ports_in_url(
+                filtered_origin_string
+            )
             url = filtered_origin_string.replace("git@", "https://")
             return url
 
