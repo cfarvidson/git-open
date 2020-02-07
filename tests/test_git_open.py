@@ -74,6 +74,10 @@ def test_get_origin_line(test_input, expected):
             "origin	https://github.com/qmk/qmk_firmware (fetch)",
             "https://github.com/qmk/qmk_firmware",
         ),
+        (
+            "origin	ssh://git@gitlab.some-domain.com:2222/user/some-repo.git (fetch)",
+            "git@gitlab.some-domain.com:2222/user/some-repo",
+        ),
     ],
 )
 def test_filter_origin_line(test_input, expected):
@@ -95,6 +99,10 @@ def test_filter_origin_line(test_input, expected):
         (
             "https://bitbucket.org/some-namespace/some-repo",
             "https://bitbucket.org/some-namespace/some-repo",
+        ),
+        (
+            "git@gitlab.some-domain.com:2222/user/some-repo",
+            "https://gitlab.some-domain.com:2222/user/some-repo",
         ),
     ],
 )
