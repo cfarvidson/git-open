@@ -4,6 +4,7 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 [![Maintainability](https://api.codeclimate.com/v1/badges/09be50f0293cfed0e89a/maintainability)](https://codeclimate.com/github/cfp2000/git-open/maintainability)
 [![Downloads](http://pepy.tech/badge/git-open)](http://pepy.tech/project/git-open)
+[![pypi](https://img.shields.io/pypi/v/git-open.svg)](https://pypi.python.org/pypi/git-open)
 
 Open a git repo in the browser from the terminal.
 
