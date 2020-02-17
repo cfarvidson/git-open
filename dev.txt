@@ -49,7 +49,7 @@ secretstorage==3.1.2      # via keyring
 sh==1.12.14
 six==1.14.0
 toml==0.10.0              # via black, check-manifest, tox
-tox==3.14.4
+tox==3.14.5
 tqdm==4.42.0              # via twine
 twine==3.1.1
 typed-ast==1.4.1          # via black
