@@ -12,7 +12,7 @@ bumpversion==0.5.3
 certifi==2019.11.28       # via requests
 cffi==1.14.0              # via cryptography
 chardet==3.0.4            # via requests
-check-manifest==0.40
+check-manifest==0.41
 click==7.0
 colorama==0.4.3           # via pytest-watch
 coverage==5.0.3
@@ -30,6 +30,7 @@ more-itertools==8.2.0     # via pytest
 packaging==20.1           # via pytest, tox
 pathspec==0.7.0           # via black
 pathtools==0.1.2          # via watchdog
+pep517==0.8.1             # via check-manifest
 pkginfo==1.5.0.1          # via twine
 pluggy==0.13.1            # via pytest, tox
 py==1.8.1                 # via pytest, tox
@@ -48,7 +49,7 @@ requests==2.22.0          # via requests-toolbelt, twine
 secretstorage==3.1.2      # via keyring
 sh==1.12.14
 six==1.14.0
-toml==0.10.0              # via black, check-manifest, tox
+toml==0.10.0              # via black, check-manifest, pep517, tox
 tox==3.14.5
 tqdm==4.42.0              # via twine
 twine==3.1.1
