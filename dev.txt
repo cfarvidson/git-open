@@ -13,7 +13,7 @@ certifi==2019.11.28       # via requests
 cffi==1.14.0              # via cryptography
 chardet==3.0.4            # via requests
 check-manifest==0.41      # via -r requirements/dev.in
-click==7.0                # via -r requirements/../requirements.txt, black
+click==7.1.1              # via -r requirements/../requirements.txt, black
 colorama==0.4.3           # via pytest-watch
 coverage==5.0.3           # via -r requirements/dev.in
 cryptography==2.8         # via secretstorage
