@@ -15,7 +15,7 @@ chardet==3.0.4            # via requests
 check-manifest==0.41      # via -r requirements/dev.in
 click==7.1.1              # via -r requirements/../requirements.txt, black
 colorama==0.4.3           # via pytest-watch
-coverage==5.0.3           # via -r requirements/dev.in
+coverage==5.0.4           # via -r requirements/dev.in
 cryptography==2.8         # via secretstorage
 docopt==0.6.2             # via pytest-watch
 docutils==0.16            # via readme-renderer
