@@ -24,7 +24,7 @@ filelock==3.0.12          # via tox
 flake8==3.7.9             # via -r requirements/dev.in
 idna==2.8                 # via requests
 jeepney==0.4.2            # via keyring, secretstorage
-keyring==21.2.0           # via -r requirements/dev.in, twine
+keyring==21.2.1           # via -r requirements/dev.in, twine
 mccabe==0.6.1             # via flake8
 more-itertools==8.2.0     # via pytest
 packaging==20.1           # via pytest, tox
