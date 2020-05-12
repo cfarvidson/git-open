@@ -19,9 +19,8 @@ coverage==5.1             # via -r requirements/dev.in
 cryptography==2.8         # via secretstorage
 docopt==0.6.2             # via pytest-watch
 docutils==0.16            # via readme-renderer
-entrypoints==0.3          # via flake8
 filelock==3.0.12          # via tox
-flake8==3.7.9             # via -r requirements/dev.in
+flake8==3.8.0             # via -r requirements/dev.in
 idna==2.8                 # via requests
 jeepney==0.4.2            # via keyring, secretstorage
 keyring==21.2.1           # via -r requirements/dev.in, twine
@@ -34,9 +33,9 @@ pep517==0.8.1             # via check-manifest
 pkginfo==1.5.0.1          # via twine
 pluggy==0.13.1            # via pytest, tox
 py==1.8.1                 # via pytest, tox
-pycodestyle==2.5.0        # via flake8
+pycodestyle==2.6.0        # via flake8
 pycparser==2.19           # via cffi
-pyflakes==2.1.1           # via flake8
+pyflakes==2.2.0           # via flake8
 pygments==2.5.2           # via readme-renderer
 pyparsing==2.4.6          # via packaging
 pytest-runner==5.2        # via -r requirements/dev.in
