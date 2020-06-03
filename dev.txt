@@ -41,7 +41,7 @@ pygments==2.5.2           # via readme-renderer
 pyparsing==2.4.6          # via packaging
 pytest-runner==5.2        # via -r requirements/dev.in
 pytest-watch==4.2.0       # via -r requirements/dev.in
-pytest==5.4.2             # via -r requirements/dev.in, pytest-watch
+pytest==5.4.3             # via -r requirements/dev.in, pytest-watch
 readme-renderer==24.0     # via twine
 regex==2020.1.8           # via black
 requests-toolbelt==0.9.1  # via twine
