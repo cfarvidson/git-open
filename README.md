@@ -1,6 +1,6 @@
 # git-open
 
-[![CI Status](https://travis-ci.com/cfarvidson/git-open.svg?branch=master)](https://travis-ci.com/cfarvidson/git-open)
+[![Test](https://github.com/cfarvidson/git-open/workflows/Test/badge.svg)](https://github.com/cfarvidson/git-open/actions)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 [![Maintainability](https://api.codeclimate.com/v1/badges/09be50f0293cfed0e89a/maintainability)](https://codeclimate.com/github/cfp2000/git-open/maintainability)
 [![Downloads](http://pepy.tech/badge/git-open)](http://pepy.tech/project/git-open)

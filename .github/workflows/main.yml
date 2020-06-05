@@ -1,0 +1,49 @@
+name: Test
+
+on: [push]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.8]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.x
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install black check-manifest flake8 flake8-isort
+      - name: Lint with black
+        run: black --check --verbose setup.py src tests
+      - name: Lint with flake8
+        run: flake8 src tests setup.py docs/conf.py
+      - name: Check manifest
+        run: check-manifest
+
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.6, 3.7, 3.8, pypy2, pypy3]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest pytest-runner mock
+          pip install -r requirements.txt
+          make install
+      - name: Test with pytest
+        run: |
+          pytest --basetemp=$(pwd)
