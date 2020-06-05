@@ -3,6 +3,10 @@ Changelog
 
 **unreleased**
 
+v1.1.2
+-----
+- Upgraded dependencies
+
 v1.1.1
 -----
 - Fixes a bug when custom ports are used in the remote
