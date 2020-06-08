@@ -1,6 +1,5 @@
 -r ../requirements.txt  # production
 flake8
-tox
 coverage
 pytest
 pytest-runner
