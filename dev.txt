@@ -50,7 +50,7 @@ secretstorage==3.1.2      # via keyring
 sh==1.13.1                # via -r requirements/../requirements.txt
 six==1.15.0               # via -r requirements/../requirements.txt, bleach, cryptography, packaging, readme-renderer, tox
 toml==0.10.0              # via black, check-manifest, pep517, tox
-tox==3.15.1               # via -r requirements/dev.in
+tox==3.15.2               # via -r requirements/dev.in
 tqdm==4.42.0              # via twine
 twine==3.1.1              # via -r requirements/dev.in
 typed-ast==1.4.1          # via black
