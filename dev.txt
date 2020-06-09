@@ -20,7 +20,7 @@ coverage==5.1             # via -r requirements/dev.in
 cryptography==2.8         # via secretstorage
 docopt==0.6.2             # via pytest-watch
 docutils==0.16            # via readme-renderer
-flake8==3.8.2             # via -r requirements/dev.in
+flake8==3.8.3             # via -r requirements/dev.in
 idna==2.8                 # via requests
 jeepney==0.4.2            # via keyring, secretstorage
 keyring==21.2.1           # via -r requirements/dev.in, twine
