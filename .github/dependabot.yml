@@ -1,8 +1,8 @@
 version: 2
 updates:
-- package-ecosystem: pip
-  directory: "/"
-  schedule:
-    interval: daily
-    timezone: Europe/Stockholm
-  rebase-strategy: disabled
+  - package-ecosystem: pip
+    directory: "/"
+    schedule:
+      interval: daily
+      timezone: Europe/Stockholm
+    rebase-strategy: auto
