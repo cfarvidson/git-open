@@ -22,17 +22,17 @@ docopt==0.6.2             # via pytest-watch
 docutils==0.16            # via readme-renderer
 flake8==3.8.3             # via -r requirements/dev.in
 idna==2.8                 # via requests
+iniconfig==1.0.1          # via pytest
 jeepney==0.4.2            # via keyring, secretstorage
 keyring==21.2.1           # via -r requirements/dev.in, twine
 mccabe==0.6.1             # via flake8
-more-itertools==8.2.0     # via pytest
 packaging==20.1           # via pytest
 pathspec==0.7.0           # via black
 pathtools==0.1.2          # via watchdog
 pep517==0.8.1             # via check-manifest
 pkginfo==1.5.0.1          # via twine
 pluggy==0.13.1            # via pytest
-py==1.8.1                 # via pytest
+py==1.9.0                 # via pytest
 pycodestyle==2.6.0        # via flake8
 pycparser==2.19           # via cffi
 pyflakes==2.2.0           # via flake8
@@ -40,7 +40,7 @@ pygments==2.5.2           # via readme-renderer
 pyparsing==2.4.6          # via packaging
 pytest-runner==5.2        # via -r requirements/dev.in
 pytest-watch==4.2.0       # via -r requirements/dev.in
-pytest==5.4.3             # via -r requirements/dev.in, pytest-watch
+pytest==6.1.0             # via -r requirements/dev.in, pytest-watch
 readme-renderer==24.0     # via twine
 regex==2020.1.8           # via black
 requests-toolbelt==0.9.1  # via twine
@@ -49,13 +49,12 @@ rfc3986==1.4.0            # via twine
 secretstorage==3.1.2      # via keyring
 sh==1.13.1                # via -r requirements/../requirements.txt
 six==1.15.0               # via -r requirements/../requirements.txt, bleach, cryptography, packaging, readme-renderer
-toml==0.10.0              # via black, check-manifest, pep517
+toml==0.10.0              # via black, check-manifest, pep517, pytest
 tqdm==4.42.0              # via twine
 twine==3.2.0              # via -r requirements/dev.in
 typed-ast==1.4.1          # via black
 urllib3==1.25.8           # via requests
 watchdog==0.10.1          # via pytest-watch
-wcwidth==0.1.8            # via pytest
 webencodings==0.5.1       # via bleach
 wheel==0.34.2             # via -r requirements/dev.in
 
