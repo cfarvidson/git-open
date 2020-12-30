@@ -22,8 +22,8 @@ docopt==0.6.2             # via pytest-watch
 docutils==0.16            # via readme-renderer
 flake8==3.8.3             # via -r requirements/dev.in
 idna==2.8                 # via requests
-jeepney==0.4.2            # via keyring, secretstorage
-keyring==21.2.1           # via -r requirements/dev.in, twine
+jeepney==0.6.0            # via keyring, secretstorage
+keyring==21.8.0           # via -r requirements/dev.in, twine
 mccabe==0.6.1             # via flake8
 more-itertools==8.2.0     # via pytest
 packaging==20.1           # via pytest
@@ -46,7 +46,7 @@ regex==2020.1.8           # via black
 requests-toolbelt==0.9.1  # via twine
 requests==2.22.0          # via requests-toolbelt, twine
 rfc3986==1.4.0            # via twine
-secretstorage==3.1.2      # via keyring
+secretstorage==3.3.0      # via keyring
 sh==1.13.1                # via -r requirements/../requirements.txt
 six==1.15.0               # via -r requirements/../requirements.txt, bleach, cryptography, packaging, readme-renderer
 toml==0.10.0              # via black, check-manifest, pep517
