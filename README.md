@@ -29,6 +29,7 @@ Options:
 Commands:
   branch   Open the current branch
   commit   Open the current commit
+  compare  Open a compare view
   version  Show the current git-open version
 ```
 
