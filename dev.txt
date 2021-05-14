@@ -11,16 +11,20 @@ bleach==3.1.4
 bump2version==1.0.0
 bumpversion==0.6.0
 certifi==2019.11.28
+cffi==1.14.5
 chardet==3.0.4
 check-manifest==0.42
 click==7.1.2
 colorama==0.4.3
 coverage==5.2.1
+cryptography==3.4.7
 docopt==0.6.2
 docutils==0.16
 flake8==3.8.3
 idna==2.8
-keyring==21.2.1
+importlib-metadata==4.0.1
+jeepney==0.6.0
+keyring==23.0.1
 mccabe==0.6.1
 more-itertools==8.2.0
 packaging==20.1
@@ -31,11 +35,9 @@ pkginfo==1.5.0.1
 pluggy==0.13.1
 py==1.8.1
 pycodestyle==2.6.0
+pycparser==2.20
 pyflakes==2.2.0
 pygments==2.5.2
-pyobjc-core==7.2
-pyobjc-framework-cocoa==7.2
-pyobjc-framework-fsevents==7.2
 pyparsing==2.4.6
 pytest-runner==5.2
 pytest-watch==4.2.0
@@ -45,6 +47,7 @@ regex==2020.1.8
 requests-toolbelt==0.9.1
 requests==2.22.0
 rfc3986==1.4.0
+secretstorage==3.3.1
 sh==1.13.1
 six==1.15.0
 toml==0.10.0
@@ -56,6 +59,7 @@ watchdog==0.10.1
 wcwidth==0.1.8
 webencodings==0.5.1
 wheel==0.34.2
+zipp==3.4.1
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
