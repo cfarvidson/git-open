@@ -2,6 +2,7 @@ Changelog
 =========
 
 **unreleased**
+- Adds "git open compare" command
 
 v1.1.2
 -----

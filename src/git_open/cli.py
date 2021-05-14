@@ -28,6 +28,18 @@ def commit():
 
 
 @cli.command()
+@click.option(
+    "-t", "--target", default="master", help="Target branch/commit to compare with"
+)
+def compare(target):
+    """Open a compare view"""
+    git_repo = GitOpen()
+    click.echo("Opening compare...")
+    git_repo.add_compare_to_url(target)
+    git_repo.open_from_terminal()
+
+
+@cli.command()
 def branch():
     """Open the current branch"""
     git_repo = GitOpen()

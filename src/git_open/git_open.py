@@ -11,6 +11,10 @@ class GitOpen(object):
     """The class that will open the url to the remote repository from
     terminal"""
 
+    GITLAB = "GITLAB"
+    GITHUB = "GITHUB"
+    BITBUCKET = "BITBUCKET"
+
     def __init__(self):
         self.url = ""
         self.remotes = self.get_remotes()
@@ -18,6 +22,15 @@ class GitOpen(object):
         origin_line = self.get_origin_line(self.remotes)
         origin_line = self.filter_origin_line(origin_line)
         self.url = self.make_url(origin_line)
+        if "github.com" in self.url:
+            self.type = GitOpen.GITHUB
+        elif "gitlab.com" in self.url:
+            self.type = GitOpen.GITLAB
+        elif "bitbucket.org" in self.url:
+            self.type = GitOpen.BITBUCKET
+        else:
+            # Default to gitlab since there are many self hosted gitlab servers
+            self.type = GitOpen.GITLAB
 
     @staticmethod
     def get_origin_line(remotes_string):
@@ -53,8 +66,8 @@ class GitOpen(object):
     @staticmethod
     def _handle_ports_in_url(origin_string):
         """Converts : to / if the : is followed by a character
-        
-        git@gitlab.some-domain.com:2222/user/some-repo => Does nothing 
+
+        git@gitlab.some-domain.com:2222/user/some-repo => Does nothing
         git@gitlab.some-domain.com:user/some-repo => git@gitlab.some-domain.com/user/some-repo
         """
         if ":" in origin_string:
@@ -90,8 +103,15 @@ class GitOpen(object):
             )
 
     def add_commit_to_url(self):
-        commit_hash = GitOpen.get_current_commit_hash()
-        self.url += "/commit/%s" % commit_hash
+        current_commit_hash = GitOpen.get_current_commit_hash()
+        self.url += "/commit/%s" % current_commit_hash
+
+    def add_compare_to_url(self, target):
+        current_commit_hash = GitOpen.get_current_commit_hash()
+        prefix = ""
+        if self.type == GitOpen.GITLAB:
+            prefix = "/-"
+        self.url += "%s/compare/%s...%s" % (prefix, target, current_commit_hash)
 
     def add_branch_to_url(self):
         branch = GitOpen.get_current_branch()
