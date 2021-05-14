@@ -5,5 +5,5 @@
 #    pip-compile --output-file=requirements.txt requirements/base.in
 #
 click==7.1.2
-sh==1.13.1
+sh==1.14.1
 six==1.15.0
