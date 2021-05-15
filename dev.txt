@@ -17,7 +17,7 @@ chardet==3.0.4
 check-manifest==0.46
 click==8.0.0
 colorama==0.4.3
-coverage==5.2.1
+coverage==5.5
 cryptography==3.4.7
 docopt==0.6.2
 docutils==0.16
@@ -51,7 +51,7 @@ requests==2.22.0
 rfc3986==1.4.0
 secretstorage==3.3.1
 sh==1.14.1
-six==1.15.0
+six==1.16.0
 toml==0.10.2
 tqdm==4.42.0
 twine==3.2.0
