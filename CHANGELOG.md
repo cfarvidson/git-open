@@ -3,6 +3,10 @@ Changelog
 
 **unreleased**
 
+v1.2.1
+-----
+- Bumps dependencies
+
 v1.2.0
 -----
 - Adds "git open compare" command
