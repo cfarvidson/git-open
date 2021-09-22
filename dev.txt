@@ -13,7 +13,7 @@ bumpversion==0.6.0
 certifi==2019.11.28
 cffi==1.14.5
 chardet==3.0.4
-check-manifest==0.46
+check-manifest==0.47
 click==8.0.1
 colorama==0.4.3
 coverage==5.5
