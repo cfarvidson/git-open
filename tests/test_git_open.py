@@ -78,6 +78,10 @@ def test_get_origin_line(test_input, expected):
             "origin	ssh://git@gitlab.some-domain.com:2222/user/some-repo.git (fetch)",
             "git@gitlab.some-domain.com:2222/user/some-repo",
         ),
+        (
+            "origin	git+ssh://git@gitlab.some-domain.com:2222/user/some-repo.git (fetch)",
+            "git@gitlab.some-domain.com:2222/user/some-repo",
+        ),
     ],
 )
 def test_filter_origin_line(test_input, expected):
