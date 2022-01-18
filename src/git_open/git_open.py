@@ -56,6 +56,7 @@ class GitOpen(object):
 
         # Remove protocols
         origin_line = re.sub("[A-Za-z0-9][A-Za-z0-9+.-]*://", "", origin_line)
+        origin_line = re.sub("[A-Za-z0-9][A-Za-z0-9+.-]*@", "", origin_line)
 
         origin_line = re.sub("\.git.*$", "", origin_line)
         origin_line = re.sub("\(.*\)", "", origin_line)
@@ -85,21 +86,13 @@ class GitOpen(object):
         'github.com:username/git_open.git' ->
         https://github.com/username/git_open
         """
-        if filtered_origin_string.startswith("http"):
-            return filtered_origin_string
-
-        elif filtered_origin_string.startswith("git@"):
-            filtered_origin_string = GitOpen._handle_ports_in_url(
-                filtered_origin_string
-            )
-            url = filtered_origin_string.replace("git@", "https://")
-            return url
-
-        else:
+        if filtered_origin_string.startswith("git@"):
             raise NotImplementedError(
                 "The filtered origin string did not start as expected",
                 filtered_origin_string,
             )
+
+        return "https://" + GitOpen._handle_ports_in_url(filtered_origin_string)
 
     def add_commit_to_url(self):
         current_commit_hash = GitOpen.get_current_commit_hash()

@@ -48,39 +48,39 @@ def test_get_origin_line(test_input, expected):
     [
         (
             "origin	git@git.myserver.com:username/git_open.git (fetch)",
-            "git@git.myserver.com:username/git_open",
+            "git.myserver.com:username/git_open",
         ),
         (
             "origin	git@github.com:username/git_open.git (fetch)",
-            "git@github.com:username/git_open",
+            "github.com:username/git_open",
         ),
         (
             "origin	https://github.com/username/git_open.git (fetch)",
-            "https://github.com/username/git_open",
+            "github.com/username/git_open",
         ),
         (
             "origin	https://bitbucket.com/blah/blah/git_open.git (fetch)",
-            "https://bitbucket.com/blah/blah/git_open",
+            "bitbucket.com/blah/blah/git_open",
         ),
         (
             "origin	git@bitbucket.com:username/blah/git_open.git (fetch)",
-            "git@bitbucket.com:username/blah/git_open",
+            "bitbucket.com:username/blah/git_open",
         ),
         (
             "origin	git@bitbucket.org:some-namespace/some-repo.git (fetch)",
-            "git@bitbucket.org:some-namespace/some-repo",
+            "bitbucket.org:some-namespace/some-repo",
         ),
         (
             "origin	https://github.com/qmk/qmk_firmware (fetch)",
-            "https://github.com/qmk/qmk_firmware",
+            "github.com/qmk/qmk_firmware",
         ),
         (
             "origin	ssh://git@gitlab.some-domain.com:2222/user/some-repo.git (fetch)",
-            "git@gitlab.some-domain.com:2222/user/some-repo",
+            "gitlab.some-domain.com:2222/user/some-repo",
         ),
         (
             "origin	git+ssh://git@gitlab.some-domain.com:2222/user/some-repo.git (fetch)",
-            "git@gitlab.some-domain.com:2222/user/some-repo",
+            "gitlab.some-domain.com:2222/user/some-repo",
         ),
     ],
 )
@@ -92,21 +92,25 @@ def test_filter_origin_line(test_input, expected):
     "test_input,expected",
     [
         (
-            "git@git.myserver.com:username/git_open",
+            "git.myserver.com:username/git_open",
             "https://git.myserver.com/username/git_open",
         ),
-        ("git@github.com:username/git_open", "https://github.com/username/git_open"),
+        ("github.com:username/git_open", "https://github.com/username/git_open"),
         (
-            "git@bitbucket.org:some-namespace/some-repo",
+            "bitbucket.org:some-namespace/some-repo",
             "https://bitbucket.org/some-namespace/some-repo",
         ),
         (
-            "https://bitbucket.org/some-namespace/some-repo",
+            "bitbucket.org/some-namespace/some-repo",
             "https://bitbucket.org/some-namespace/some-repo",
         ),
         (
-            "git@gitlab.some-domain.com:2222/user/some-repo",
+            "gitlab.some-domain.com:2222/user/some-repo",
             "https://gitlab.some-domain.com:2222/user/some-repo",
+        ),
+        (
+            "github.com/qmk/qmk_firmware",
+            "https://github.com/qmk/qmk_firmware",
         ),
     ],
 )
@@ -114,9 +118,7 @@ def test_make_url(test_input, expected):
     assert GitOpen.make_url(test_input) == expected
 
 
-@pytest.mark.parametrize(
-    "test_input", ["other-username@bitbucket.org:some-namespace/some-repo"]
-)
+@pytest.mark.parametrize("test_input", ["git@bitbucket.org:some-namespace/some-repo"])
 def test_make_url_exception(test_input):
     with pytest.raises(NotImplementedError):
         GitOpen.make_url(test_input)
