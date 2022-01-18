@@ -3,6 +3,11 @@ Changelog
 
 **unreleased**
 
+v1.2.2
+-----
+- Bumps dependencies
+- Fixes the issue with `git+ssh://` in remotes <https://github.com/cfarvidson/git-open/pull/267>
+
 v1.2.1
 -----
 - Bumps dependencies
