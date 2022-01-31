@@ -5,7 +5,7 @@
 #    pip-compile --no-annotate --output-file=dev.txt requirements/dev.in
 #
 attrs==19.3.0
-black==21.12b0
+black==22.1.0
 bleach==3.1.4
 build==0.3.1.post1
 bump2version==1.0.0
@@ -52,10 +52,9 @@ secretstorage==3.3.1
 sh==1.14.2
 six==1.16.0
 toml==0.10.2
-tomli==1.0.4
+tomli==2.0.0
 tqdm==4.42.0
 twine==3.7.1
-typing-extensions==3.10.0.2
 urllib3==1.25.8
 watchdog==0.10.1
 webencodings==0.5.1
