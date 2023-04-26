@@ -49,6 +49,15 @@ def branch():
 
 
 @cli.command()
+def actions():
+    """Open GitHub actions"""
+    git_repo = GitOpen()
+    click.echo("Opening GitHub actions...")
+    git_repo.add_actions_to_url()
+    git_repo.open_from_terminal()
+
+
+@cli.command()
 def version():
     """Show the current git-open version"""
     click.echo("version: {}".format(__version__))

@@ -109,6 +109,9 @@ class GitOpen(object):
         branch = GitOpen.get_current_branch()
         self.url += "/tree/%s" % branch
 
+    def add_actions_to_url(self):
+        self.url += "/actions"
+
     @staticmethod
     def get_remotes():
         try:
