@@ -3,6 +3,9 @@ Changelog
 
 **unreleased**
 
+v1.3.0
+-----
+
 v1.2.2
 -----
 - Bumps dependencies
