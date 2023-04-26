@@ -28,7 +28,4 @@ def test_command():
         result = runner.invoke(cli.cli, ["actions"])
         assert result.exit_code == 0
         assert "Opening GitHub actions..." in result.output
-        assert (
-            "Opening https://github.com/cfarvidson/git-open/commit/MOCKED_HASH"
-            in result.output
-        )
+        assert "Opening https://github.com/cfarvidson/git-open/actions" in result.output
