@@ -5,6 +5,7 @@ Changelog
 
 v1.3.0
 -----
+- Adds the `actions` command
 
 v1.2.2
 -----
