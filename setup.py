@@ -25,7 +25,6 @@ CLASSIFIERS = [
     "Programming Language :: Python",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: Implementation :: CPython",
-    "Programming Language :: Python :: Implementation :: PyPy",
     "Topic :: Utilities",
 ]
 INSTALL_REQUIRES = ["Click>=6.7", "sh>=1.12.14", "six>=1.11.0"]
