@@ -40,7 +40,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install pytest pytest-runner mock
           pip install -r requirements.txt
-          make install
+          pip install .
       - name: Test with pytest
         run: |
           pytest
