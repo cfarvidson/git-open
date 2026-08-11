@@ -2,6 +2,9 @@ Changelog
 =========
 
 **unreleased**
+
+v2.0.0
+-----
 - Bumps all dependencies, including `sh` 1.x -> 2.x and `click` 8.0 -> 8.4
 - Drops the `six` dependency
 - Requires Python 3.10 or later
