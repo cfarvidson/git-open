@@ -3,7 +3,6 @@ import re
 import string
 import sys
 import webbrowser
-import six
 import sh
 
 
@@ -115,10 +114,7 @@ class GitOpen(object):
     @staticmethod
     def get_remotes():
         try:
-            remotes = sh.git("remote", "-v").stdout
-            if isinstance(remotes, six.binary_type):
-                remotes = remotes.decode()
-            return remotes
+            return str(sh.git("remote", "-v"))
 
         except Exception:
             print("Something went wrong.. Is this a git repo?")

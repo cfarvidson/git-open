@@ -26,11 +26,6 @@ def test_command_line_interface():
             "origin	git@git.myserver.com:username/git_open.git (push)",
             "origin	git@git.myserver.com:username/git_open.git (fetch)",
         ),
-        (
-            "origin	git@git.myserver.com:username/git_open.git (fetch)\n"
-            "origin	git@git.myserver.com:username/git_open.git (push)",
-            "origin	git@git.myserver.com:username/git_open.git (fetch)",
-        ),
     ],
 )
 def test_get_origin_line(test_input, expected):

@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """The setup script."""
+
 import codecs
 import os
 import re
@@ -23,15 +24,18 @@ CLASSIFIERS = [
     "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
     "Operating System :: OS Independent",
     "Programming Language :: Python",
-    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "Programming Language :: Python :: Implementation :: CPython",
     "Topic :: Utilities",
 ]
-INSTALL_REQUIRES = ["Click>=6.7", "sh>=1.12.14", "six>=1.11.0"]
+INSTALL_REQUIRES = ["Click>=8.0", "sh>=2.0.0"]
 EXTRAS_REQUIRE = {
     "docs": ["sphinx"],
     "setup": ["wheel"],
-    "tests": ["pytest", "coverage", "flake8", "six"],
+    "tests": ["pytest", "coverage", "flake8"],
 }
 EXTRAS_REQUIRE["dev"] = (
     EXTRAS_REQUIRE["tests"] + EXTRAS_REQUIRE["docs"] + ["pre-commit"]
@@ -88,6 +92,7 @@ if __name__ == "__main__":
         package_dir={"": "src"},
         zip_safe=False,
         include_package_data=True,
+        python_requires=">=3.10",
         install_requires=INSTALL_REQUIRES,
         classifiers=CLASSIFIERS,
         test_suite="tests",
